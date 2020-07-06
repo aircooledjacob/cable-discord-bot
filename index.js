@@ -27,8 +27,7 @@ client.on('message', async message => {
 		client.commands.get(command).execute(message, args, client);
 	}
 	catch(err) {
-		message.channel.send(err);
-		console.log(err);
+		return;
 	}
 });
 
