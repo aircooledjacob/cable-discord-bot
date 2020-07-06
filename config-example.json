@@ -1,0 +1,10 @@
+{
+	"token": "YOUR TOKEN HERE",
+	"default_prefix": "YOUR PREFIX HERE",
+	"bot": {
+		"owner_id": "YOUR DISCORD ID HERE",
+		"name": "THE BOTS NAME HERE", 
+		"version": "YOUR VERSION HERE",
+		"Github": "YOUR GITHUB HERE"
+	}
+}

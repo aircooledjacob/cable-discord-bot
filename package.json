@@ -1,0 +1,23 @@
+{
+  "name": "cable-discord-bot",
+  "version": "0.0.1",
+  "description": "The official Github repository for the Cable discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AggrievedBubble/cable-discord-bot.git"
+  },
+  "author": "Jacob Neave",
+  "license": "LGPL-2.1",
+  "bugs": {
+    "url": "https://github.com/AggrievedBubble/cable-discord-bot/issues"
+  },
+  "homepage": "https://github.com/AggrievedBubble/cable-discord-bot#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "eslint": "^7.4.0"
+  }
+}
