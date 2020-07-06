@@ -1,4 +1,5 @@
 {
 	"token": "YOUR TOKEN HERE",
-	"default_prefix": "c "
+	"default_prefix": "c ",
+	"bot_owner_id": "YOUR DISCORD ID HERE"
 }
