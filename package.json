@@ -18,6 +18,7 @@
   "homepage": "https://github.com/AggrievedBubble/cable-discord-bot#readme",
   "dependencies": {
     "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0",
     "eslint": "^7.6.0"
   }
 }

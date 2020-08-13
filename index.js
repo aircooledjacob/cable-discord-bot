@@ -1,8 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require('./config.json');
-const prefix = config.default_prefix;
+const prefix = config.prefix;
 const fs = require('fs');
+
+require('dotenv').config();
 
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
@@ -38,7 +40,7 @@ client.on('message', async message => {
 	}
 });
 
-client.login(config.token);
+client.login(process.env.BOT_TOKEN);
 
 client.on(Error, async error => {
 	console.log(error);
