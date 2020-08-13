@@ -1,9 +1,23 @@
 module.exports = {
 	execute(message, args) {
-		let modlist = []
-		
-		if (message.author.id in ) {
+		const config = require('../config.json');
 
+		const target = message.mentions.users.first();
+		const reason = args[1];
+
+		if (target && reason) {
+			if (message.member.roles.cache.has(config.mod_role_id)) {
+				return message.channel.send(`That isn't implemented yet <@${message.author.id}>`);
+			}
+			else {
+				return message.channel.send(`Error trying to kick <@${target.id}>\n Are you sure that you have permission <@${message.author.id}>`);
+			}
+		}
+		else if (target && !reason) {
+			return message.channel.send(`You must provide a reason <@${message.author.id}>`);
+		}
+		else {
+			module.exports.help(message);
 		}
 	},
 	help(message) {
