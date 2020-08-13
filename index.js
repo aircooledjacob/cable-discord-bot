@@ -4,6 +4,8 @@ const config = require('./config.json');
 const prefix = config.default_prefix;
 const fs = require('fs');
 
+require('dotenv').config();
+
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for (const file of commandFiles) {
@@ -38,7 +40,7 @@ client.on('message', async message => {
 	}
 });
 
-client.login(config.token);
+client.login(process.env.BOT_TOKEN);
 
 client.on(Error, async error => {
 	console.log(error);
