@@ -34,7 +34,7 @@ client.on('message', async message => {
 		client.commands.get(command).execute(message, args, client);
 	}
 	catch(err) {
-		return;
+		return console.log(err);
 	}
 });
 
