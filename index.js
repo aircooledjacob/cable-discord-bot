@@ -18,6 +18,13 @@ client.once('ready', async () => {
 });
 
 client.on('message', async message => {
+	if (message.content === 'wat') {
+		message.channel.messages.fetch({ limit: 2 }).then(messages => {
+			const lastMessage = messages.first(2)[1];
+			message.channel.send(`<@${lastMessage.author.id}> said "${lastMessage.content}"`);
+		});
+	}
+
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
 	const args = message.content.slice(prefix.length).split(/ +/);
@@ -27,7 +34,7 @@ client.on('message', async message => {
 		client.commands.get(command).execute(message, args, client);
 	}
 	catch(err) {
-		return;
+		return console.log(err);
 	}
 });
 
